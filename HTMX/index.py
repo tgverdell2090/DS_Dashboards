@@ -47,6 +47,20 @@ def get(act:int):
     )
     
     return dropdown
+
+@app.route('/update_speakers')
+def get(act:int, scene:int=None):
+    options = queries.speakers(act=act, scene=scene).to_dict(orient='records') #get the scenes for the selected act
+    dropdown = selector(
+        name='speaker',
+        id='speaker',
+        label='Speaker',
+        options=options,
+        value_key='id', #added value_key to use the 'text' column as the value for the options
+        text_key='speaker', #added text_key to use the 'speaker' column as the text for the options
+    )
+    
+    return dropdown
     
 @app.route('/words/')
 async def post(r):

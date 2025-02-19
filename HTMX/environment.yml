@@ -1,0 +1,14 @@
+name: fasthtml-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - python-fasthtml
+  - pandas>=1.5.0
+  - pip
+  - matplotlib
+  - pip:
+    - uvicorn>=0.15.0
+    - gunicorn>=20.1.0
+    - fh-matplotlib

@@ -6,6 +6,7 @@ def selector(
     label,
     options,
     value_key='id',
+    text_key='text',
     hx_get=None,
     hx_target=None,
     hx_include=None
@@ -15,7 +16,7 @@ def selector(
     _options = []
 
     for opt in options:
-        _opt = Option(opt['text'], value=opt[value_key])
+        _opt = Option(opt[text_key], value=opt[value_key])
         _options.append(_opt)
 
     return Div(

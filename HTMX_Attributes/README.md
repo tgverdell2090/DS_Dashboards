@@ -29,3 +29,8 @@ Specifies how the HTML element should be replaced.
 hx_swap="outerHTML"
 ```
 Setting hx_swap to "outerHTML" replaces the entire element, not just its content.
+
+# Exercise: Setting HTMX Attributes
+
+Follow the comments in `index.py` and replace `#### YOUR CODE HERE` with the relevant code
+
